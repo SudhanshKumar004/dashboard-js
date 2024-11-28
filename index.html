@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./signup.css">
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <form action="./login.html">
+    <form action="./login.html" id="form-main">
+            <h1 id="head">Sign Up</h1>
         <div id="errorname"></div>
-        <label for="name">Name</label>
         <input type="text" id="name" placeholder="Enter your name"> <br><br>
         <div id="erroremail"></div>
-        <label for="email">Email</label>
         <input type="email" id="email" placeholder="Enter your email"> <br><br>
         <div id="errornum"></div>
-        <label for="number">Number</label>
         <input type="text" id="number" placeholder="Enter your number"> <br><br>
         <div id="errorpsw"></div>
-        <label for="psw">Password</label>
         <input type="password" id="psw" placeholder="Create a Password"> <br><br>
 
-        <button onclick="data()" type="submit">Sign Up</button>
+        <button onclick="return data()" type="submit">Sign Up</button><br>
+        <p id="bottom-p">Already have an account?<a href="./login.html">login</a></p>
+
         </form>
 
         <script src="/signup.js"></script>

@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("https://cdn.vectorstock.com/i/1000v/91/03/geometric-blue-cold-texture-background-vector-24999103.jpg");
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+    #form-main{
+
+         #head{
+        align-items: center;
+        font-size: 52px;
+        margin-bottom: 20px;
+        background: -webkit-linear-gradient(120deg,rgb(57, 159, 199), rgb(212, 4, 4));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+        background-color: white;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 90px;
+        margin-top: 10px;
+        border: 1px black solid;
+        box-shadow: 0 0 5px skyblue,0 0 10px black;
+
+        input{
+            font-size: 15px;
+            padding: 5px;
+            color: red;
+            border: 0px;
+            border-bottom: 2px skyblue solid;
+            width: 100%;
+        }
+
+        button{
+            font-size: 20px;
+            gap: 4px;
+            color: black;
+            padding: 5px;
+            border: 2px skyblue solid;
+        background: linear-gradient(45deg,rgb(57, 159, 199), white);
+        }
+        button:hover{
+            background: white;
+            color: red;
+            box-shadow: 0 0 5px black,0 0 5px red;
+            border: 2px red solid;
+        }
+
+        #bottom-p{
+        font-size: 15px;
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: rgb(63, 123, 146);
+        }
+
+    }
+    }
+    
+}

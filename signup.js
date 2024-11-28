@@ -10,6 +10,7 @@ function data(){
         let selectedname = document.querySelector('#name');
         selectedname.style.borderColor = "red";
         selectedname.style.outlineColor = "red";
+        return false;
     }
 
     if(email === ""){
@@ -17,6 +18,7 @@ function data(){
         let selectedemail = document.querySelector('#email');
         selectedemail.style.borderColor = "red";
         selectedemail.style.outlineColor = "red";
+        return false;
     }
 
     else if(!(email.includes('@') && email.includes('.com'))){
@@ -24,6 +26,7 @@ function data(){
         let selectemail = document.querySelector('#email');
         selectemail.style.borderColor = "red";
         selectemail.style.outlineColor = "red";
+        return false;
     }
 
     if(number === ""){
@@ -31,6 +34,7 @@ function data(){
         let selectednumber = document.querySelector('#number');
         selectednumber.style.borderColor = "red";
         selectednumber.style.outlineColor = "red";
+        return false;
     }
 
      else if(number.length !== 10){
@@ -38,6 +42,7 @@ function data(){
         let selectnumber = document.querySelector('#number');
         selectnumber.style.borderColor = "red";
         selectnumber.style.outlineColor = "red";
+        return false;
     }
 
      else if(isNaN(number)){
@@ -45,6 +50,7 @@ function data(){
         let selectnumber = document.querySelector('#number');
         selectnumber.style.borderColor = "red";
         selectnumber.style.outlineColor = "red";
+        return false;
     }
     
     if(psw === ""){
@@ -60,6 +66,7 @@ function data(){
         let selectpsw = document.querySelector('#psw');
         selectpsw.style.borderColor = "red";
         selectpsw.style.outlineColor = "red";
+        return false;
     }
 
     localStorage.setItem("name", name)

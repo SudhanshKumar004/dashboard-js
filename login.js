@@ -6,7 +6,8 @@ function loginpage(){
 
     if(getemail == email && getpsw == psw){
         window.alert("done")
-        window.location.href = "./dash.html"
+        window.location.href = "./dash.html";
+        return false;
     }
 
 }

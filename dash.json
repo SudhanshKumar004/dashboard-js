@@ -1,0 +1,32 @@
+{
+    "Data":[
+        {
+            "name":"alex",
+            "email":"abc@gmail.com",
+            "age":"24",
+            "city":"bhopal",
+            "number":"123456"
+        },
+        {
+            "name":"alex",
+            "email":"abc@gmail.com",
+            "age":"24",
+            "city":"bhopal",
+            "number":"123456"
+        },
+        {
+            "name":"alex",
+            "email":"abc@gmail.com",
+            "age":"24",
+            "city":"bhopal",
+            "number":"123456"
+        },
+        {
+            "name":"alex",
+            "email":"abc@gmail.com",
+            "age":"24",
+            "city":"bhopal",
+            "number":"123456"
+        }
+    ]
+}
