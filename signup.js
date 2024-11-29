@@ -61,16 +61,10 @@ function data(){
         return false;
     }
 
-     else if(!(psw.match(/[123456789]/) && psw.match(/[!@#$%^&*()]/) && psw.match(/[qwertyuiopasdfghjklzxcvbnm]/) && (/[QWERTYUIOPASDFGHJKLZXCVBNM]/))){
-         document.querySelector('#errorpsw').innerHTML = "Password should contain upper case, lower case, spacial character, numbers";
-        let selectpsw = document.querySelector('#psw');
-        selectpsw.style.borderColor = "red";
-        selectpsw.style.outlineColor = "red";
-        return false;
-    }
-
     localStorage.setItem("name", name)
     localStorage.setItem("email", email)
     localStorage.setItem("number", number)
     localStorage.setItem("password", psw)
+
+    window.alert("Signed Up Successfully")
 }

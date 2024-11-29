@@ -9,8 +9,38 @@
     <link rel="stylesheet" href="./dash.css">
 </head>
 <body>
+    <header id="hero">
+        <div id="navbar">
+            <nav>
+                <div id="left-element">
+                <h1>My DashBoard</h1>
+                </div>
+                <div id="right-element">
+                    <h1><a href="./index.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign Out</a></h1>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="nav2">
+        <h1><span>Details</span></h1>
+
+    </div>
+    <div id="nav3">
+        <h1>Manage Employees</h1>
+        <button id="buttonforadd" onclick="showform();"><i class="fa-solid fa-plus"></i> Add New</button>
+    </div>
+    <div id="add">
+        <form id="addform">
+            <input type="text" placeholder="Enter Name" id="addname"><br>
+            <input type="text" placeholder="Enter Email" id="addemail"><br>
+            <input type="text" placeholder="Enter Age" id="addage"><br>
+            <input type="text" placeholder="Enter City" id="addcity"><br>
+            <input type="text" placeholder="Enter Number" id="addnumber"><br>
+            <button onclick="add()">Add Data</button>
+        </form>
+    </div>
     <div class="container">
-         <table border="">
+         <table id="table">
         <thead id="head">
             <th>ID</th>
             <th>NAME</th>
@@ -18,11 +48,16 @@
             <th>AGE</th>
             <th>CITY</th>
             <th>NUMBER</th>
+            <th colspan="3">ACTIONS</th>
         </thead>
         <tbody id="output">
 
         </tbody>
     </table>
+    </div>
+
+    <div id="edittable">
+
     </div>
 
     <script src="./dash.js"></script>

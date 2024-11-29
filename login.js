@@ -5,9 +5,12 @@ function loginpage(){
     let psw = document.querySelector('#psw2').value;
 
     if(getemail == email && getpsw == psw){
-        window.alert("done")
+        window.alert("Welcome to DashBoard")
         window.location.href = "./dash.html";
         return false;
+    }
+    else{
+        window.alert("Invalid Email or password")
     }
 
 }
