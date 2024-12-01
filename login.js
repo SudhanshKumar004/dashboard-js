@@ -6,7 +6,7 @@ function loginpage(){
 
     if(getemail == email && getpsw == psw){
         window.alert("Welcome to DashBoard")
-        window.location.href = "./dash.html";
+        window.location.href = "./home.html";
         return false;
     }
     else{

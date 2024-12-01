@@ -6,22 +6,17 @@ async function gather(){
 
     let print = data.map((i)=>`
 
-    <style>
-        tr{
-        border-bottom: 1px black solid;
-        }
-    </style>
-            <tr>
+
+            <tr id="tabledata">
                 <td>${i.id}</td>
                 <td>${i.name}</td>
                 <td>${i.email}</td>
                 <td>${i.age}</td>
                 <td>${i.city}</td>
                 <td>${i.number}</td>
-                <td><button><i class="fa-solid fa-eye" style="color:green;font-size:20px;background-color:white"></i></button></td>
-                <td><button id="" onclick="fordelete('${i.id}')"><i class="fa-solid fa-trash" style="color:red;font-size:20px;background-color:white"></i>
-                </button></td>
-                <td><button onclick="myedit('${i.id}')"><i class="fa-solid fa-pen" style="color:gold;font-size:20px;background-color:white"></i></button></td>
+                <td><button id="eye"><i class="fa-solid fa-eye"></i></button></td>
+                <td><button id="trash" onclick="fordelete('${i.id}')"><i class="fa-solid fa-trash"></i></button></td>
+                <td><button id="editt" onclick="myedit('${i.id}')"><i class="fa-solid fa-pen"></i></button></td>
 
             </tr>
         `).join(" ")
@@ -50,6 +45,8 @@ function fordelete(id){
 
 //Edit Function
 async function myedit(id){
+    let showedit = document.querySelector('#edittable')
+    showedit.style.display = "block";
     let myupdate = await fetch(`http://localhost:3000/Data/${id}`)
     let redata = await myupdate.json();
     let senddata = `
@@ -64,7 +61,7 @@ async function myedit(id){
     <input type="text" value="${redata.age}" id="age1" ><br>
     <input type="text" value="${redata.city}" id="city1" ><br>
     <input type="text" value="${redata.number}" id="number1" ><br>
-    <input type="submit" onclick="finalupdate('${redata.id}')">
+    <input type="submit" value="Update Data" onclick="finalupdate('${redata.id}')">
     `
     document.querySelector('#edittable').innerHTML = senddata;
 }
@@ -94,13 +91,6 @@ function showform()
     selectform.style.display = "block";
 }
 
-function close()
-{
-     let selectform = document.querySelector('#addform');
-    selectform.style.display = "none";
-}
-
-
 //Add Function
 function add()
 {
@@ -121,7 +111,12 @@ function add()
         body:JSON.stringify(addeddata)
     }
     ).then(res=>alert("Data Added Successfully"))
+
+    let selectform = document.querySelector('#addform');
+    selectform.style.display = "none";
+
 }
+
 
 
 

@@ -23,6 +23,8 @@ body{
                 }
             }
             #right-element{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
                 a{
                     color: white;
                     font-size: 18px;
@@ -105,13 +107,6 @@ body{
     }
     }
 
-    #add{
-        #addform{
-            display:none;
-        }
-    }
-
-
     .container{
         border: 1px silver solid;
         box-shadow: 0 0 10px black,0 5px 10px silver;
@@ -140,11 +135,36 @@ body{
             #output{
                 text-align: center;
                 width: 100%;
+                
+                #tabledata{
+                    td{
+                            #eye{
+                                font-size: 25px;
+                                color: green;
+                                border: none;
+                            }
+                            #trash{
+                                color:red;
+                                font-size:25px;
+                                border: none;
+                            }
+                            #editt{
+                                color:gold;
+                                font-size:25px;
+                                border:none;
+                            }
+                        }
+                }
+                #tabledata:nth-child(odd){
+                    width: 100%;
+                        background-color: rgba(245, 222, 179, 0.495);
+                }
+
                 td{
                     color: black;
                     font-size: 22px;
                     padding: 10px 40px;
-                    border-bottom: 1px #3c4fe0 dashed;
+                    // border-bottom: 1px #3c4fe0 dashed;
                 }
             }
         }
@@ -158,19 +178,26 @@ body{
         #addform{
             display: grid;
             justify-content: center;
+            align-items: center;
             margin: 10px;
             width: 30%;
             margin-left: 550px;
-            padding: 10px;
+            padding: 50px;
             background: linear-gradient(45deg,#ffb55a71,silver);
             box-shadow: 0 0 3px black,0 0 10px black;
 
             input{
-                padding: 3px 45px;
+                width: 100%;
+                height: 100%;
+                padding: 5px;
                 box-shadow: 2px 0 5px white,0 0 10px black;
+                display: grid;
+                justify-content: center;
+                align-items: center;
             }
 
             button{
+                width: 100%;
                 font-size: 15px;
                 border-radius: 5px;
                 border: 1px #3c4fe0 solid;
@@ -180,17 +207,289 @@ body{
     }
 
     #edittable{
-         display: grid;
+            display: grid;
             justify-content: center;
+            align-items: center;
             margin: 10px;
             width: 30%;
             margin-left: 550px;
-            padding: 10px;
+            padding: 50px;
             background: linear-gradient(45deg,#ffb55a71,silver);
             box-shadow: 0 0 3px black,0 0 10px black;
 
             input{
-                padding: 3px 45px;
+                width: 100%;
+                padding: 5px;
                 box-shadow: 2px 0 5px white,0 0 10px black;
+                display: grid;
+                justify-content: center;
+                align-items: center;
             }
+        }
+
+        #foot{
+            background-color: #ffb55a71;
+            #items{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                margin-top:100px;
+                padding: 10px;
+                h1{
+                    text-align: center;
+                    color: #01359edc;
+                    width: 100%;
+                    span{
+                        color:rgba(255, 0, 0, 0.68);
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+
+//Tablet View
+@media screen and (max-width:768px)
+        {
+            .container{
+                #table{
+                    #head{
+                        th{
+                            font-size: 12px;
+                            padding: 10px 20px;
+                        }
+                    }
+                    #output{
+
+                text-align: center;
+                width: 100%;
+                
+                #tabledata{
+                    td{
+                        font-size: 12px;
+                            #eye{
+                                font-size: 15px;
+                                color: green;
+                            }
+                             #trash{
+                                color:red;
+                                font-size:15px;
+                                border: none;
+                            }
+                            #editt{
+                                color:gold;
+                                font-size:15px;
+                                border:none;
+                            }
+                        }
+                }
+                #tabledata:nth-child(odd){
+                    width: 100%;
+                        background-color: rgba(245, 222, 179, 0.495);
+                }
+
+                td{
+                    color: black;
+                    font-size: 22px;
+                    padding: 5px 20px;
+                    // border-bottom: 1px #3c4fe0 dashed;
+                }
+            }
+                }
+            }
+            #add{
+        #addform{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            width: 40%;
+            margin-left: 250px;
+            padding: 50px;
+            background: linear-gradient(45deg,#ffb55a71,silver);
+            box-shadow: 0 0 3px black,0 0 10px black;
+
+            input{
+                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+                box-shadow: 2px 0 5px white,0 0 10px black;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+
+            button{
+                width: 100%;
+                font-size: 15px;
+                border-radius: 5px;
+                border: 1px #3c4fe0 solid;
+                padding: 5px;
+            }
+        }
+    }
+
+    #edittable{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 30%;
+            margin-left:250px;
+            padding: 30px;
+            background: linear-gradient(45deg,#ffb55a71,silver);
+            box-shadow: 0 0 3px black,0 0 10px black;
+
+            input{
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 2px 0 5px white,0 0 10px black;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        }
+
+//Mobile View
+@media screen and (max-width:430px){
+
+            body{
+                #hero{
+                    #navbar{
+                        nav{
+                           #left-element{
+                            h1{
+                                font-size: 15px;
+                            }
+                           }
+                           #right-element{
+                            a{
+                                font-size: 15px;
+                            }
+                           }
+                        }
+                    }
+                }
+               #nav3{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between; 
+        align-items: center;
+        width: 95%;
+        margin: 10px;
+        background-color: #ffb55a71;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        h1{
+            font-size: 15px;
+        }
+            }
+             .container{
+                margin-left: 10px;
+                #table{
+                    #head{
+                        th{
+                            font-size: 10px;
+                            padding: 5px 10px;
+                        }
+                    }
+                    #output{
+
+                text-align: center;
+                width: 100%;
+                
+                #tabledata{
+                    td{
+                        font-size: 10px;
+                            #eye{
+                                font-size: 10px;
+                                color: green;
+                            }
+                             #trash{
+                                color:red;
+                                font-size:10px;
+                                border: none;
+                            }
+                            #editt{
+                                color:gold;
+                                font-size:10px;
+                                border:none;
+                            }
+                        }
+                }
+                #tabledata:nth-child(odd){
+                    width: 100%;
+                        background-color: rgba(245, 222, 179, 0.495);
+                }
+
+                td{
+                    color: black;
+                    font-size: 15px;
+                    padding: 5px 0px;
+                    // border-bottom: 1px #3c4fe0 dashed;
+                }
+            }
+                }
+            }
+        }
+
+        #add{
+        #addform{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 50%;
+            font-size: 15px;
+            margin-left: 100px;
+            padding: 10px;
+            background: linear-gradient(45deg,#ffb55a71,silver);
+            box-shadow: 0 0 3px black,0 0 10px black;
+            border-radius: 2px;
+
+            input{
+                width: 100%;
+                border-radius: 4px;
+                height: 100%;
+                padding: 5px;
+                box-shadow: 2px 0 5px white,0 0 10px black;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+            }
+
+            button{
+                width: 100%;
+                font-size: 15px;
+                border-radius: 5px;
+                border: 1px #3c4fe0 solid;
+                padding: 5px;
+            }
+        }
+    }
+
+    #edittable{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 50%;
+            margin-left: 100px;
+            padding: 30px;
+            background: linear-gradient(45deg,#ffb55a71,silver);
+            box-shadow: 0 0 3px black,0 0 10px black;
+
+            input{
+                width: 100%;
+                padding: 5px;
+                box-shadow: 2px 0 5px white,0 0 10px black;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }

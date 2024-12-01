@@ -6,7 +6,7 @@
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>JavaScript CRUD</title>
-    <link rel="stylesheet" href="./dash.css">
+    <link rel="stylesheet" href="./home.css">
 </head>
 <body>
     <header id="hero">
@@ -23,45 +23,33 @@
             </nav>
         </div>
     </header>
-    <div id="nav2">
-        <h1><span>Details</span></h1>
+     <div id="nav2">
+        <h1><span>Company Graph</span></h1>
 
     </div>
-    <div id="nav3">
-        <h1>Manage Employees</h1>
-        <button id="buttonforadd" onclick="showform();"><i class="fa-solid fa-plus"></i> Add New</button>
+    <section id="main-container">
+    <div id="jointer">
+        <div id="line1">
+            <img src="./1stgrapgh.png" alt="">
+            <img src="./2nd.png" alt="">
+        </div>
+        <div id="line2">
+            <img src="./6th.jpg" alt="">
+        </div>
+        <div id="line3">
+            <img src="./7th.jpg" alt="">
+        </div>
     </div>
-    <div id="add">
-        <form id="addform" style="display: none;">
-            <input type="text" placeholder="Enter Name" id="addname"><br>
-            <input type="text" placeholder="Enter Email" id="addemail"><br>
-            <input type="text" placeholder="Enter Age" id="addage"><br>
-            <input type="text" placeholder="Enter City" id="addcity"><br>
-            <input type="text" placeholder="Enter Number" id="addnumber"><br>
-            <button onclick="add()">Add Data</button>
-        </form>
+    <div id="jointer2">
+        <div id="line4">
+             <img src="./3rd.png" alt="">
+            <img src="./4th.png" alt="">
+        </div>
+        <div id="line5">
+            <img src="./5th.png" alt="">
+        </div>
     </div>
-    <div class="container">
-         <table id="table">
-        <thead id="head">
-            <th>ID</th>
-            <th>NAME</th>
-            <th>EMAIL</th>
-            <th>AGE</th>
-            <th>CITY</th>
-            <th>NUMBER</th>
-            <th colspan="3">ACTIONS</th>
-        </thead>
-        <tbody id="output">
-
-        </tbody>
-    </table>
-    </div>
-
-    <div id="edittable" style="display:none;">
-
-    </div>
-
+    </section>
     <footer id="foot">
         <div id="items">
             <h1>All Copyrights Reserved 2024&copy; <span>By Sudhansh</span> </h1>
